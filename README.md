@@ -317,6 +317,12 @@ B00000IND0	Positive
 …………Truncated…………
 ```
 
+# Techonology Used:
+- Java
+- MapReduce
+- Apache Hadoop
+- IBM BLuemix
+
 [1]: Liu, B. (2012). Sentiment analysis and opinion mining. Synthesis lectures on human language technologies, 5(1), 1-167.
 [2]: Gandomi, A., & Haider, M. (2015). Beyond the hype: Big data concepts, methods, and analytics. International Journal of Information Management, 35(2), 137-144.
 [3]: MapReduce Tutorial. https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html. Accessed on: 29-11-2016.
