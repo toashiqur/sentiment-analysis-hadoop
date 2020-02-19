@@ -1,0 +1,3 @@
+- myproj folder is the source project.
+- SentimentAnalysis.jar is the jar file of the developed program.
+- Output folder holds two sample output files. 
