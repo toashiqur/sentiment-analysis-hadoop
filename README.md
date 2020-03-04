@@ -1,6 +1,6 @@
-Sentiment analysis, an area of Natural Language Processing (NLP), is the computational study that seeks people’s attitude, positive or negative, about a particular topic by analyzing their written sentences or documents. It is also known as opinion mining and concerned with people’s sentiments, opinions, attitude, evaluations, appraisals and emotions towards various entities such as products, organizations, services etc. [1].
+Sentiment analysis, an area of Natural Language Processing (NLP), is the computational study that seeks people’s attitude, positive or negative, about a particular topic by analyzing their written sentences or documents. It is also known as opinion mining and concerned with people’s sentiments, opinions, attitude, evaluations, appraisals and emotions towards various entities such as products, organizations, services etc.
 
-The application area of sentiment analysis is wide and very influential. Availability of big data from various sources has created opportunities to understand people’s opinion for various purposes. Sources include websites, company databases, government databases etc.  Marketing, finance, political and social issues are some of the major application areas of it [2]. 
+The application area of sentiment analysis is wide and very influential. Availability of big data from various sources has created opportunities to understand people’s opinion for various purposes. Sources include websites, company databases, government databases etc.  Marketing, finance, political and social issues are some of the major application areas of it. 
 However, performing sentiment analysis is not a trivial task. Usually, analysis is performed on big size data to get an accurate estimate of people’s sentiment. Automatic processing is thus needed to handle voluminous data. We need both good algorithms and fast processing systems in order to analyze and summarize people’s opinion. The process must be convenient and able to perform analysis within a reasonable amount of time. As an example, decision makers of an online business might need to check people’s opinion about their thousands of products on daily basis. For such a system sentiment analysis is needed to perform within the possible shortest time.
 
 Distributed processing techniques such as MapReduce and platforms like Hadoop have created opportunities for doing such tasks very conveniently and quickly.
@@ -10,14 +10,14 @@ This project presents a sentiment analysis task performed in Hadoop environment 
 # Distributed Processing Technique and Platform
 
 ##	MapReduce 
-MapReduce is a software framework for writing applications that process large scale data in a distributed fashion. A MapReduce task can be divided into two phases, the map phase and the reduce phase. The map phase performs filtering and sorting, and the reduce phase performs a summary operation. Servers in MapReduce platform are organized in master-workers architecture.  The master is responsible for interacting with the users [3]. 
-After receiving programs from users the master splits them into map and reduce works and assigns the works to the distributed servers over several nodes. Each mapper works independently and after processing produces <key, value> pairs which are fed to the reducer after sorting. The reducer reduces the input key-value pairs and generates output. User needs to write his own program for the map phase and the reduce phase. Below is a sample of input and output types of a MapReduce job [3].
+MapReduce is a software framework for writing applications that process large scale data in a distributed fashion. A MapReduce task can be divided into two phases, the map phase and the reduce phase. The map phase performs filtering and sorting, and the reduce phase performs a summary operation. Servers in MapReduce platform are organized in master-workers architecture.  The master is responsible for interacting with the users. 
+After receiving programs from users the master splits them into map and reduce works and assigns the works to the distributed servers over several nodes. Each mapper works independently and after processing produces <key, value> pairs which are fed to the reducer after sorting. The reducer reduces the input key-value pairs and generates output. User needs to write his own program for the map phase and the reduce phase. Below is a sample of input and output types of a MapReduce job ([see more])[map-reduce-link].
 ```
 (input) <k1, v1> -> map -> <k2, v2> -> combine -> <k2, v2> -> reduce -> <k3, v3> (output)
 ```
 
 ##	Apache Hadoop
-Hadoop is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules [4]:
+Hadoop is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules ([see more])[hadoop-link]:
 1.	Hadoop Distributed File System (HDFS): Commodity machines are used for storing data by HDFS. It has the capability to provide high aggregate bandwidth across the clusters.
 2.	MapReduce: It is a programming model for large scale data processing.
 3.	YARN: Yet Another Resource Negotiator (YARN) is a platform responsible for managing resources in clusters.
@@ -29,7 +29,7 @@ In addition to HDFS, YARN and MapReduce, the Hadoop ecosystem consists of a numb
 ![]({{site.baseurl}}/assets/images/hadoop-EcoSys_yarn-640x418.PNG)
 
 ## IBM Bluemix
-IBM Bluemix [7] is an open standards, cloud based PaaS for building, running and managing applications. Several programming languages, services and development tools are supported by IBM Bluemix to build, run, deploy and manage applications in the cloud.
+[IBM Bluemix][bluemix-link] is an open standards, cloud based PaaS for building, running and managing applications. Several programming languages, services and development tools are supported by IBM Bluemix to build, run, deploy and manage applications in the cloud.
 
 Java, Node.js, Go, PHP, Swift, Python, Ruby Sinatra, Ruby on Rails are currently supported programming languages by IBM Bluemix. It can also be extended to support other languages such as Scala. Besides, different categories of services such as Watson, InternetOfThings, Network, Security and others are supported by IBM Bluemix. Its apps include Cloud Foundry, mobile apps etc.
 A Bluemix account is needed to access the services offered by IBM Bluemix. Figure 2 presents the catalog interface of IBM Bluemix. As can be seen from the interface there are different services under different categories.
@@ -38,7 +38,7 @@ A Bluemix account is needed to access the services offered by IBM Bluemix. Figur
 ![]({{site.baseurl}}/assets/images/bluemix_catalog.png)
 
 ## BigInsights
-BigInsights is a software platform for discovering, analyzing, and visualizing data from various sources. It provides a collection of value-added services that can be installed on top of the IBM Open Platform with Apache Hadoop [5].
+[BigInsights][biginsight-link] is a software platform for discovering, analyzing, and visualizing data from various sources. It provides a collection of value-added services that can be installed on top of the IBM Open Platform with Apache Hadoop.
 Application developers, data scientists, business analysts and other interested users can develop and run custom analytics to get insights from big data using BigInsights. This data is often integrated into existing databases, data warehouses, and business intelligence infrastructure. 
 Through its tools and value-added services BigInsights simplify development and maintenance. Software developers can use the value-added services to analyze loosely structured and unstructured data. Besides, data analysis tools can be used by data scientists and business analysts to explore and work with unstructured data in a familiar environment.
 It saves organizations from creating their own Hadoop infrastructure. They can simply buy and use the services from IBM Bluemix.
@@ -62,7 +62,7 @@ In this project, a list of positive words, negative words and customers’ revie
  ```
  <member id> \t <product id> \t <date> \t <number of helpful feedbacks> \t <number of feedbacks> \t <rating> \t <title> \t <body>
  ```
-The data files were collected from http://130.15.6.119/ [6]. Figure 5 shows the web interface from where the data files were collected.
+The data files were collected from http://130.15.6.119/ [Hu, M., & Liu, B. (2004, August). Mining and summarizing customer reviews]. Figure 5 shows the web interface from where the data files were collected.
 
 *Figure.5 - Source of Data*
 ![]({{site.baseurl}}/assets/images/data_source.png)
@@ -284,7 +284,7 @@ The SentimentAnalysis.jar file accepts <List of positive words> <List of negativ
 -bash-4.1$ yarn jar SentimentAnalysis.jar /tmp/testfolder/positive.txt /tmp/testfolder/negative.txt /tmp/testfolder/alldata.txt /tmp/testresult
 ```
 
-The output file get stored in the HDFS directory which is accessible and downloadable through the Ambari [8] web interface. Below a few results obtained by analyzing alldata.txt is presented. The output file part-00000 provided in the output directory was generated by providing the positive.txt, negative.txt and alldata.txt files to the sentiment analysis program. It took only around 30 minutes to process the alldata.txt file of size 1.9 GB using the Hadoop MapReduce.
+The output file get stored in the HDFS directory which is accessible and downloadable through the [Ambari] [ambari-link] web interface. Below a few results obtained by analyzing alldata.txt is presented. The output file part-00000 provided in the output directory was generated by providing the positive.txt, negative.txt and alldata.txt files to the sentiment analysis program. It took only around 30 minutes to process the alldata.txt file of size 1.9 GB using the Hadoop MapReduce.
 
 ```
 ………………………………
@@ -323,11 +323,12 @@ B00000IND0	Positive
 - Apache Hadoop
 - IBM BLuemix
 
-[1]: Liu, B. (2012). Sentiment analysis and opinion mining. Synthesis lectures on human language technologies, 5(1), 1-167.
-[2]: Gandomi, A., & Haider, M. (2015). Beyond the hype: Big data concepts, methods, and analytics. International Journal of Information Management, 35(2), 137-144.
-[3]: MapReduce Tutorial. https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html. Accessed on: 29-11-2016.
-[4]: An introduction to Apache Hadoop for big data. https://opensource.com/life/14/8/intro-apache-hadoop-big-data. Accessed on: 29-11-2016.
-[5]: Introduction to BigInsights. http://www.ibm.com/support/knowledgecenter/SSPT3X_4.1.0/-com.ibm.swg.im.infosphere.biginsights.product.doc/doc/c0057605.html. Accessed on: 29-11-2016.
-[6]: Hu, M., & Liu, B. (2004, August). Mining and summarizing customer reviews. In Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 168-177). ACM.
-[7]: IBM. What is IBM Bluemix? https://www.ibm.com/developerworks/cloud/library/cl-bluemixfoundry/. Accessed on: 1-12-2016.
-[8]: IBM. Ambari. http://www.ibm.com/support/knowledgecenter/SSPT3X_4.2.0/-com.ibm.swg.im.infosphere.biginsights.product.doc/doc/ambari.html. Accessed on: 1-12-2016.
+[map-reduce-link]: https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
+
+[hadoop-link]: https://opensource.com/life/14/8/intro-apache-hadoop-big-data
+
+[biginsight-link]: http://www.ibm.com/support/knowledgecenter/SSPT3X_4.1.0/-com.ibm.swg.im.infosphere.biginsights.product.doc/doc/c0057605.html
+
+[bluemix-link]: https://www.ibm.com/developerworks/cloud/library/cl-bluemixfoundry/
+
+[ambari-link]: http://www.ibm.com/support/knowledgecenter/SSPT3X_4.2.0/-com.ibm.swg.im.infosphere.biginsights.product.doc/doc/ambari.html
