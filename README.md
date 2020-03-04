@@ -7,17 +7,24 @@ Distributed processing techniques such as MapReduce and platforms like Hadoop ha
 
 This project presents a sentiment analysis task performed in Hadoop environment using the MapReduce technique. Hadoop was accessed through the BigInsights service offered by the IBM cloud Bluemix. The sentiment analysis program was tested on a text file of 1.9 GB size. The obtained results were correct and the performance was satisfactory.
 
+## Techonology Used:
+- Java
+- MapReduce
+- Apache Hadoop
+- IBM BLuemix
+
 # Distributed Processing Technique and Platform
 
 ##	MapReduce 
-MapReduce is a software framework for writing applications that process large scale data in a distributed fashion. A MapReduce task can be divided into two phases, the map phase and the reduce phase. The map phase performs filtering and sorting, and the reduce phase performs a summary operation. Servers in MapReduce platform are organized in master-workers architecture.  The master is responsible for interacting with the users. 
-After receiving programs from users the master splits them into map and reduce works and assigns the works to the distributed servers over several nodes. Each mapper works independently and after processing produces <key, value> pairs which are fed to the reducer after sorting. The reducer reduces the input key-value pairs and generates output. User needs to write his own program for the map phase and the reduce phase. Below is a sample of input and output types of a MapReduce job ([see more])[map-reduce-link].
+[MapReduce][mapreduce-link] is a software framework for writing applications that process large scale data in a distributed fashion. A MapReduce task can be divided into two phases, the map phase and the reduce phase. The map phase performs filtering and sorting, and the reduce phase performs a summary operation. Servers in MapReduce platform are organized in master-workers architecture.  The master is responsible for interacting with the users. 
+After receiving programs from users the master splits them into map and reduce works and assigns the works to the distributed servers over several nodes. Each mapper works independently and after processing produces <key, value> pairs which are fed to the reducer after sorting. The reducer reduces the input key-value pairs and generates output. User needs to write his own program for the map phase and the reduce phase. Below is a sample of input and output types of a MapReduce job.
 ```
 (input) <k1, v1> -> map -> <k2, v2> -> combine -> <k2, v2> -> reduce -> <k3, v3> (output)
 ```
 
 ##	Apache Hadoop
-Hadoop is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules ([see more])[hadoop-link]:
+[Hadoop[[hadoop-link] is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules:
+
 1.	Hadoop Distributed File System (HDFS): Commodity machines are used for storing data by HDFS. It has the capability to provide high aggregate bandwidth across the clusters.
 2.	MapReduce: It is a programming model for large scale data processing.
 3.	YARN: Yet Another Resource Negotiator (YARN) is a platform responsible for managing resources in clusters.
@@ -316,12 +323,6 @@ B00000INCW	Negative
 B00000IND0	Positive
 …………Truncated…………
 ```
-
-# Techonology Used:
-- Java
-- MapReduce
-- Apache Hadoop
-- IBM BLuemix
 
 [map-reduce-link]: https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
 
