@@ -7,7 +7,8 @@ Distributed processing techniques such as MapReduce and platforms like Hadoop ha
 
 This project presents a sentiment analysis task performed in Hadoop environment using the MapReduce technique. Hadoop was accessed through the BigInsights service offered by the IBM cloud Bluemix. The sentiment analysis program was tested on a text file of 1.9 GB size. The obtained results were correct and the performance was satisfactory.
 
-## Techonology Used:
+# Techonology Used:
+- Natural Language Processing
 - Java
 - MapReduce
 - Apache Hadoop
