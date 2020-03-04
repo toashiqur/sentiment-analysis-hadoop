@@ -23,7 +23,7 @@ After receiving programs from users the master splits them into map and reduce w
 ```
 
 ##	Apache Hadoop
-[Hadoop[[hadoop-link] is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules:
+[Hadoop][hadoop-link] is Apache’s free and open source implementation of the MapReduce framework. It is a project to develop open source software for flexible, scalable and distributed computing. Hadoop framework consists of the following four modules:
 
 1.	Hadoop Distributed File System (HDFS): Commodity machines are used for storing data by HDFS. It has the capability to provide high aggregate bandwidth across the clusters.
 2.	MapReduce: It is a programming model for large scale data processing.
@@ -324,7 +324,7 @@ B00000IND0	Positive
 …………Truncated…………
 ```
 
-[map-reduce-link]: https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
+[mapreduce-link]: https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
 
 [hadoop-link]: https://opensource.com/life/14/8/intro-apache-hadoop-big-data
 
